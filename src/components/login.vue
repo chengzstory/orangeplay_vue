@@ -1,6 +1,5 @@
 <template class="bjys ztys">
   <div>
-    <top></top>
     <div class="center">
       <ul>
         <li>
@@ -24,9 +23,11 @@
             <p>欢迎免费加入及轻松使用。继续创建OrangePlay 帐户<br/>
               并获取 OrangePlay - 适合 PC 和 Mac 玩家的前沿数字解决<br/>
               方案。</p>
-            <a href="/register">
-              <Button type="success" size="small" style="margin-top: 5px"><p>加入OrangePlay</p></Button>
+
+            <a href="/#/register">
+            <Button type="success" size="small" style="margin-top: 5px"><p>加入OrangePlay</p></Button>
             </a>
+
           </div>
         </li>
         <li>
@@ -43,16 +44,13 @@
         </li>
       </ul>
     </div>
-    <bottom></bottom>
   </div>
-
 </template>
 
-<style>
+<style scoped>
   .center {
     margin: 80px;
     background-color: #163855;
-    height: auto;
     overflow: hidden;
   }
   p {
@@ -84,26 +82,15 @@
   .ztys {
     color: #c6d4df;
   }
-  body {
-    background-color: #183F59;
-    font-family: "微软雅黑",Arial,sans-serif;
-  }
-
 </style>
 
 <script>
-  import top from '@/components/top'
-  import bottom from '@/components/bottom'
-
   export default {
-    components : {
-      top,bottom
-    },
     data() {
       return {
         radio : false
       }
-    }
+    },
   }
 </script>
 

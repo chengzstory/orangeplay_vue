@@ -14,7 +14,11 @@
     "element-ui": "^2.2.0",
     "iview": "^2.9.2",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-awesome-swiper": "^3.1.3",
+    "vue-router": "^3.0.1",
+    "vue-slide": "^1.1.1",
+    "vue-slide-mini": "^1.0.4",
+    "vue-swiper-component": "^2.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

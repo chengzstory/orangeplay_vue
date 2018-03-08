@@ -1,12 +1,10 @@
 <template>
-  <div class="bjys ztys">
-    <top></top>
+  <div>
     <div class="center">
       <ul>
         <li>
           <div class="header">
             <h1 class="title1">创建账户</h1>
-
             <p>创建 OrangePlay 用户名称</p>
             <Input class="input" v-model="username" @on-blur="check_username()" size="small"/>
             <span v-if="show0">{{msg[0]}}</span>
@@ -32,7 +30,9 @@
             <Input class="input" v-model="phone" size="small"/>
             <span v-show="show5">{{msg[5]}}</span><br/>
 
-            <Button style="margin-top: 10px" type="success" @click="register()">下一步</Button>
+            <router-link to="/login">
+              <Button style="margin-top: 10px" type="success" @click="register()">下一步</Button>
+            </router-link>
           </div>
         </li>
         <li>
@@ -49,16 +49,15 @@
         </li>
       </ul>
     </div>
-    <bottom></bottom>
   </div>
-
 </template>
 
-<style>
+<style scoped>
   .center {
     margin-top: 20px;
     margin-left: 380px;
-    height: auto;
+    margin-bottom: 20px;
+    overflow: hidden;
   }
   p {
     font-size: 15px;
@@ -88,20 +87,10 @@
     font-size: 25px;
     color: #67c1f5;
   }
-  body {
-    background-color: #183F59;
-    font-family: "微软雅黑",Arial,sans-serif;
-  }
-
 </style>
 
 <script>
-  import top from '@/components/top'
-  import bottom from '@/components/bottom'
   export default {
-    components: {
-      top, bottom
-    },
     data() {
       return {
         username: '',
