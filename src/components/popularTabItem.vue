@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a href="#" class="tab_item" v-for="game in $route.query.games" :key="game.name">
+    <a href="#" class="tab_item" v-for="game in games" :key="game.name">
       <div class="tab_item_cap">
         <img :src="game.img" class="tab_item_cap_img" width="80" height="80">
       </div>
@@ -90,4 +90,16 @@
 </style>
 
 <script>
+  export default {
+    data() {
+      return {
+        games: [
+          {name: 'Pit People', img: '/static/1.jpg', price: '88元', tags: ['动作', '冒险', '益智', '策略']},
+          {name: 'Dota2', img: '/static/2.jpg', price: '88元', tags: ['动作', '冒险', '益智', '策略']},
+          {name: 'LoL', img: '/static/3.jpg', price: '88元', tags: ['动作', '冒险', '益智', '策略']},
+          {name: 'MHXY', img: '/static/4.jpg', price: '88元', tags: ['动作', '冒险', '益智', '策略']},
+        ],
+      }
+    }
+  }
 </script>
