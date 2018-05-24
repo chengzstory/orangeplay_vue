@@ -1,0 +1,132 @@
+.ivu-page {
+  color: beige;
+}
+.ivu-page-item {
+  background: burlywood;
+}
+.ivu-page-prev, .ivu-page-next {
+  background: lightgoldenrodyellow;
+}
+
+// search 的 input样式  element-ui
+.el-input {
+  .el-input__inner {
+    background-color: rgba(103, 193, 245, 0.2);
+    border: none;
+    color: cornflowerblue;
+    font-size: 14px;
+    line-height: 15px;
+  }
+}
+
+.el-popover {
+  background-color: antiquewhite;
+}
+
+.el-dropdown-menu {
+  border: 1px solid #171a21;
+  background-color: #171a21;
+  .el-dropdown-menu__item {
+    color: #b8b6b4;
+  }
+}
+.ivu-input {
+  font-weight: bold;
+}
+
+.ivu-table th {
+  background-color: #0197cf;
+  font-weight: bold;
+  color: #ffffff;
+}
+.ivu-table td, .ivu-table th {
+  border-bottom: none;
+}
+.ivu-table-wrapper {
+  border: solid 1px #2c405b;
+  position: inherit;
+}
+.ivu-table {
+  background-color: #183F59;
+}
+.ivu-table:before {
+  width: 0;
+}
+.ivu-table:after {
+  width: 0;
+}
+
+//.ivu-btn {
+//  background-color: #183F59;
+//  color: #67c1f5;
+//  border: none;
+//}
+//.ivu-btn:hover {
+//  background-color: rgb(234, 234, 234);
+//  color: #2965A5;
+//}
+
+.ivu-modal-content {
+  background-color: #183F59;
+}
+
+
+.game_area_description {
+  line-height: 1.5em;
+  font-size: 14px;
+  margin-top: 30px;
+  overflow: hidden;
+  font-weight: normal;
+  color: gainsboro;
+  h2 {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 10px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    padding-top: 2px;
+  }
+}
+.game_area_sys_req {
+  font-size: 12px;
+  font-family: Tahoma,Helvetica,Arial,'宋体',sans-serif;
+  font-weight: normal;
+  display: flex;
+  li {
+    color: aliceblue;
+  }
+  ul {
+    list-style-type: none;
+    margin-left: 0px;
+    line-height: 18px;
+  }
+}
+
+.bb_ul {
+  strong {
+    padding-right: 4px;
+    color: grey;
+  }
+  li {
+    margin-right: 20px;
+  }
+}
+.game_area_sys_req_leftCol, .game_area_sys_req_rightCol {
+  width: 50%;
+}
+
+.game_area_sys_req_full {
+  width: 70%;
+}
+
+.game_area_sys_req_leftCol > ul > strong {
+  color: #67c1f5;
+}
+.game_area_sys_req_rightCol > ul > strong {
+  color: #67c1f5;
+}
+
+.game_area_sys_req_full > ul > strong {
+  color: #67c1f5;
+}

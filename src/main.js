@@ -7,16 +7,21 @@ import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import 'swiper/dist/css/swiper.css';
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
+Vue.use(ElementUI)
+import req from './api/axios.js';
+Vue.prototype.$req = req;
 Vue.use(VueAwesomeSwiper)
-Vue.config.productionTip = false
 Vue.use(iView)
-window.axios = require('axios')
+Vue.filter('format_price', function (val) {
+  return val === 0 ? '免费游戏' : val + '元';
+});
 
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
-})
+  template: '<App/>',
+});

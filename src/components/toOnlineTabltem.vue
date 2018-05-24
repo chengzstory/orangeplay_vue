@@ -10,12 +10,12 @@
     components: {gameCap},
     data() {
       return {
-        games: [],
-        show: false,
+        games : [],
+        show : false
       }
     },
     mounted() {
-      this.$req.get('/game/populars').then(res => {
+      this.$req.get('/game/qualities').then(res => {
         this.games = res.data.data;
         this.show = true;
       })

@@ -7,13 +7,12 @@
             <h1 class="title1">登录</h1>
             <p>到现有的OrangePlay账户</p> <br>
             <p>用户名</p>
-            <Input placeholder="用户名" style="width: 300px"/>
+            <Input placeholder="用户名" style="width: 300px" v-model="username"/>
             <p style="margin-top: 10px">密码</p>
-            <Input placeholder="密码" style="width: 300px;"/><br/>
-            <Radio v-model="radio" style="margin-top: 5px">记住我一周</Radio><br/>
-            <Button onclick="login()" type="success" size="small" style="margin-top: 5px"><p>登录</p></Button>
+            <Input placeholder="密码" type="password" style="width: 300px; color: blue" v-model="password"/><br/>
+            <Button @click="login" type="success" size="small" style="margin-top: 5px"><p>登录</p></Button>
             <br/><br/>
-            <a href="/user/findpassword">忘记密码？</a>
+            <a>忘记密码？</a>
           </div>
         </li>
         <li>
@@ -43,39 +42,44 @@
           </div>
         </li>
       </ul>
+
     </div>
   </div>
 </template>
 
-<style scoped>
+<style lang="scss">
   .center {
     margin: 80px;
     background-color: #163855;
     overflow: hidden;
+    p {
+      font-size: 15px;
+      color: aliceblue;
+      margin: 3px;
+    }
+    .header {
+      margin: 20px;
+    }
+    ul li {
+      display: inline-flex;
+    }
+    .title1 {
+      font-size: 35px;
+      color: #67c1f5;
+    }
+    .title2 {
+      font-size: 35px;
+      color: #67c1f5;
+    }
+    .title3 {
+      font-size: 25px;
+      color: #67c1f5;
+    }
+    .ivu-input {
+      letter-spacing: 1px;
+    }
   }
-  p {
-    font-size: 15px;
-    color: aliceblue;
-    margin: 3px;
-  }
-  .header {
-    margin: 20px;
-  }
-  ul li {
-    display: inline-flex;
-  }
-  .title1 {
-    font-size: 35px;
-    color: #67c1f5;
-  }
-  .title2 {
-    font-size: 35px;
-    color: #67c1f5;
-  }
-  .title3 {
-    font-size: 25px;
-    color: #67c1f5;
-  }
+
   .bjys {
     background-color: rgba(0, 0, 0, 0.2);
   }
@@ -85,12 +89,23 @@
 </style>
 
 <script>
+  import req from '../api/axios'
   export default {
     data() {
       return {
-        radio : false
+        username : '',
+        password : '',
       }
     },
+    methods : {
+      login() {
+        req.post('/user/login', {username : this.username, password: this.password}).then(
+          () => {
+            this.$router.push('/');
+          }
+        );
+      }
+    }
   }
 </script>
 
